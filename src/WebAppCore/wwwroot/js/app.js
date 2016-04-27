@@ -10,6 +10,9 @@
     function($routeProvider) {
       $routeProvider.
         when('/trips', {
-            templateUrl: '/'
+            templateUrl: '/templates/trips.html', controller: 'tripsController'
+        }),
+        when('/edit', {
+            templateUrl: '/templates/editor.html', controller: 'tripEditorController'
         })
     }]);
