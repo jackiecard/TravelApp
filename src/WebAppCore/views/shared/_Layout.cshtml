@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MVC 6</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/lib/angular.js"></script>
+    <script src="~/js/app.js"></script>
+    <link href="~/lib/style/site.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="navbar-collapse collapse">
+        @await Html.PartialAsync("_LoginPartial")
+    </div>
+    <div id="sidebar">
+        <img src="~/lib/image/user1.png" alt="headshot" class="headshot" />
+        <span>Bill G.</span>
+        <ul class="menu">
+            <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="About">About</a></li>
+            <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div id="main">
+
+            @RenderBody()
+
+        </div>
+        <div id="footer">
+            &copy; 2016 CSIS 4135 Ltd.
+        </div>
+    </div>
+</body>
+
+</html>
+
